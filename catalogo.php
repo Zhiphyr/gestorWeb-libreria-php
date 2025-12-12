@@ -430,7 +430,7 @@
             });
         }
 
-        const WHATSAPP_NUMBER = '51947010376';
+        const WHATSAPP_NUMBER = '51987654321';
 
         function procesarCompra() {
             if (cart.length === 0) {
