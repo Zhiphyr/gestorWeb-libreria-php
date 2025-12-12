@@ -37,3 +37,33 @@ Este proyecto es un sistema web integral diseñado para la gestión y administra
 - `/assets`: Recursos estáticos (CSS, JS, imágenes).
 - `admin.php`: Punto de entrada al panel administrativo.
 - `catalogo.php`: Catálogo público de libros.
+
+## Conexión a la Base de Datos e instalación
+
+La conexión a la base de datos se establece en el archivo `conexionDB.php`. Asegúrate de que los datos de la base de datos sean correctos para que el sistema funcione correctamente.
+
+Crea el archivo `conexionDB.php` de la siguiente manera:
+
+```php
+<?php
+
+//Credenciales de la Base de Datos
+define("DB_HOST","localhost");
+define("DB_USER",""); //tu usuario de la base de datos
+define("DB_PASS",""); //tu contraseña de la base de datos
+define("DB_NAME","sistema_libreria");
+
+//Función para obtener la conexión
+function getConexion() {
+    $conexion = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    if ($conexion->connect_error) {
+        die("Error de conexión: ". $conexion->connect_error);
+    }
+
+    return $conexion;
+}
+
+?>
+```
+
+Para crear la base de datos, puedes usar el archivo `sistema_libreria.sql`.

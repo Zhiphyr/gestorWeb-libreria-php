@@ -1,0 +1,22 @@
+# Sistema / OS
+.DS_Store
+Thumbs.db
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencias (si se agregan a futuro)
+vendor/
+node_modules/
+
+# Configuración y Credenciales
+# Es recomendable no subir credenciales reales.
+# conexionDB.php se ignora por seguridad si contiene claves reales.
+conexionDB.php
+
+# Carpetas de subida (opcional, depende si quieres versionar las imágenes de prueba)
+# uploads/
